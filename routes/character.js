@@ -5,8 +5,7 @@ var express = require('express');
 var router = express.Router();
 const config = require('../utility/config');
 
-console.log('public key' + config.publicKey);
-console.log('private key' + config.privateKey);
+
 
 /**
  * GET /characters?name={name}&limit={limit}
@@ -41,5 +40,8 @@ router.get('/',  (req, res) => {
     res.status(500).send({ message: e });
   }
 });
+
+
+
 
 module.exports = router;
